@@ -11,12 +11,21 @@
     padding-left: 2vw;
     margin-bottom: -2vw;
     background-color: #fff;
+    position: relative;
 }
 .pride__text {
-    font-size: 5vw;
-    margin: 0px;
+    font-size: 4vw;
     text-transform: uppercase;
     pointer-events: none;
+    font-family: "Roslindale";
+}
+.pride__image {
+    position: absolute;
+    right: 2vw;
+    top: 0;
+    max-height: 5vw;
+    max-width: 120px;
+    display: none;
 }
 /* Enable hover only on non-touch devices */
 @media (hover: hover) and (pointer: fine) {

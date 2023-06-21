@@ -5,3 +5,10 @@
     padding: 0;
     box-sizing: border-box;
 }
+
+@font-face {
+    src: url("../../src/Roslindale_Web/fonts/Roslindale-DisplayCondensedSemiBold-Testing.woff") format("woff");
+    font-family: "Roslindale";
+    font-style: normal;
+    font-weight: 500;
+}
