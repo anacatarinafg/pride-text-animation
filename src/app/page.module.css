@@ -23,10 +23,12 @@
     position: absolute;
     right: 2vw;
     top: 0;
-    max-height: 5vw;
-    max-width: 120px;
-    display: none;
+    height: 5vw;
 }
+.hidden {
+    opacity: 0;
+}
+
 /* Enable hover only on non-touch devices */
 @media (hover: hover) and (pointer: fine) {
 

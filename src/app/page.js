@@ -56,15 +56,14 @@ const pride = [
 ];
 
 export default function Home() {
-
   const manageMouseEnter = (e, color) => {
     gsap.to(e.target, {
       backgroundColor: color,
       y: "-2vw",
       duration: 0.3
-    })
-
-  }
+    });
+    gsap.to(e.target.querySelector(`.${styles.pride__image}`), { opacity: 1, duration: 0.3 });
+  };
 
   const manageMouseLeave = (e, color) => {
     gsap.to(e.target, {
@@ -72,9 +71,10 @@ export default function Home() {
       y: "0vw",
       duration: 0.3,
       delay: 0.1
-    })
+    });
+    gsap.to(e.target.querySelector(`.${styles.pride__image}`), { opacity: 0, duration: 0.3 });
+  };
 
-  }
   return (
     <>
       <header>
@@ -83,19 +83,24 @@ export default function Home() {
         </nav>
       </header>
       <main className={styles.pride}>
-        {
-          pride.map((pride, index) => {
-            return (
-              <div key={index} className={styles.pride__box} onMouseEnter={(e) => { manageMouseEnter(e, pride.color) }} onMouseLeave={(e) => { manageMouseLeave(e, pride.color) }}>
-                <p className={styles.pride__text}>{pride.title}</p>
-                <img src={pride.image} alt={pride.title} className={styles.pride__image}></img>
-              </div>
-            )
-
-          })
-        }
+        {pride.map((pride, index) => {
+          return (
+            <div
+              key={index}
+              className={styles['pride__box']}
+              onMouseEnter={(e) => { manageMouseEnter(e, pride.color) }}
+              onMouseLeave={(e) => { manageMouseLeave(e, pride.color) }}
+            >
+              <p className={styles['pride__text']}>{pride.title}</p>
+              <img
+                src={pride.image}
+                alt={pride.title}
+                className={`${styles['pride__image']} ${styles.hidden}`}
+              ></img>
+            </div>
+          );
+        })}
       </main>
     </>
-
-  )
+  );
 }
