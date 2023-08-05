@@ -1,42 +1,119 @@
+.navbar {
+    width: 95%;
+    height: 140px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: auto;
+}
+
+.navbar__headline {
+    border: 1px solid #141414;
+    border-radius: 25px;
+    padding: .5em;
+    font-size: 16px;
+    color: #141414;
+    text-transform: uppercase;
+    font-family: "Roslindale", Arial;
+    background: linear-gradient(180deg, rgba(24, 24, 24, 0.5) 12.5%,
+            rgba(120, 79, 23, 0.5) 12.5%, 25%,
+            rgba(254, 0, 0, 0.5) 25%, 37.5%,
+            rgba(253, 140, 0, 0.5) 37.5%, 50%,
+            rgba(255, 229, 0, 0.5) 50%, 62.5%,
+            rgba(17, 159, 11, 0.5) 62.5%, 75%,
+            rgba(6, 68, 179, 0.5) 75%, 87.5%,
+            rgba(194, 46, 220, 0.5) 87.5%);
+}
+
+.navbar__headline:hover {
+    color: #141414;
+    background: inherit;
+}
+
+
 .pride {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    height: 100vh;
+    height: 80vh;
 }
+
 .pride__box {
     width: 100%;
-    border-top: 1px solid #141414;
-    padding-left: 2vw;
-    margin-bottom: -2vw;
+    border-top: 2px solid #141414;
+    padding-left: 2.5em;
+    margin-bottom: -2.6em;
     background-color: #fff;
     position: relative;
 }
+
 .pride__text {
-    font-size: 4vw;
+    font-size: 76px;
     text-transform: uppercase;
-    pointer-events: none;
     font-family: "Roslindale";
+    color: #141414;
+    pointer-events: none;
 }
+
+.pride__text span {
+    font-size: 16px;
+    margin-left: 25px;
+    padding: .5em 1em;
+    border-radius: 25px;
+    border: 1px solid #141414;
+    position: absolute;
+    top: 25px;
+
+}
+
 .pride__image {
     position: absolute;
     right: 2vw;
     top: 0;
-    height: 5vw;
+    height: 4.8vw;
 }
+
 .hidden {
     opacity: 0;
 }
 
 /* Enable hover only on non-touch devices */
-@media (hover: hover) and (pointer: fine) {
+@media (hover: hover) and (pointer: fine) {}
 
-}
-
-@media (prefers-reduced-motion) {
-}
+@media (prefers-reduced-motion) {}
 
 /* Tablet and Smaller Desktop */
-@media (min-width: 701px) and (max-width: 1120px) {
+@media (min-width: 400px) and (max-width: 1120px) {
+    .pride {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        height: auto;
+    }
+
+    .pride__box {
+        width: 100%;
+        border-top: 2px solid #141414;
+        padding-left: 2.5em;
+        margin-bottom: 0em;
+        background-color: #fff;
+        position: relative;
+    }
+
+    .pride__text {
+        font-size: 32px;
+    }
+
+    .pride__text span {
+        font-size: 16px;
+        margin-left: 5px;
+        padding: .5em;
+        border-radius: 25px;
+        border: 1px solid #141414;
+        position: absolute;
+        top: 0px;
+
+    }
 }
